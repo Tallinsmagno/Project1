@@ -5,5 +5,7 @@
 {% endblock %}
 
 {% block body %}
-{{name}}, you have singed up to this website!
+<div>{{name}}, you have singed up to this website!</div>
+
+<a class="btn btn-primary" href="{{ url_for('login') }}" role="button">Login</a>
 {% endblock %}

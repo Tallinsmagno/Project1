@@ -8,13 +8,15 @@
 <body>
   <div class="row">
     <div class="col-4"></div>
-    <h1  id="title" class="col-4">{% block heading %}{% endblock %}</h1>
+    <h1 class="col-4">{% block heading %}{% endblock %}</h1>
     <div class="col-4">
       <a class="btn btn-primary" href="{{ url_for('signup') }}" role="button">Sign up</a>
       <a class="btn btn-primary" href="{{ url_for('login') }}" role="button">Login</a>
+      {% if isloggedin %}
+      <a class="btn btn-primary" href="{{ url_for('index') }}" role="button">Logout</a>
+      {% endif %}
     </div>
   </div>
-
     {% block body %}
     {% endblock %}
   </body>
