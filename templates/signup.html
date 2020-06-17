@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+    Sing up
+{% endblock %}
+
+{% block body %}
+<form action="{{ url_for('signedup') }}" method="post">
+    <input type="text" name="name" placeholder="Username">
+    <input type="password" name="password" placeholder="Password">
+    <button>Submit</button>
+<form>
+{% endblock %}
